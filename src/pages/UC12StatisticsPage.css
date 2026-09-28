@@ -1,0 +1,181 @@
+/* ===== UC12 Statistics Page Styles ===== */
+
+.uc12-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Filters */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-item label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.filter-item select {
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5568' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.filter-item select:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.filters-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* Card color themes */
+.card-total {
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+  color: #2b6cb0;
+}
+
+.card-average {
+  background: linear-gradient(135deg, #faf5ff 0%, #d6bcfa 100%);
+  color: #6b46c1;
+}
+
+.card-pass {
+  background: linear-gradient(135deg, #f0fff4 0%, #9ae6b4 100%);
+  color: #276749;
+}
+
+.card-fail {
+  background: linear-gradient(135deg, #fff5f5 0%, #feb2b2 100%);
+  color: #9b2c2c;
+}
+
+.card-not-graded {
+  background: linear-gradient(135deg, #f7fafc 0%, #cbd5e0 100%);
+  color: #4a5568;
+}
+
+/* Stats Table */
+.stats-table .score-cell {
+  font-weight: 600;
+  text-align: center;
+}
+
+.no-score {
+  color: #a0aec0;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Result Badge */
+.result-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.result-pass {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.result-fail {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.result-pending {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+/* Export Area */
+.export-area {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 16px;
+}
+
+.btn-export {
+  background: #48bb78;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-export:hover:not(:disabled) {
+  background: #38a169;
+}
+
+.btn-export:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Reuse shared styles from UC11 */
+/* section, data-table, loading-state, spinner, empty-state, api-error, result-message, close-btn, btn, btn-primary are defined in UC11GradingPage.css */
